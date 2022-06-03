@@ -1,0 +1,14 @@
+n = -100:1:100;
+T2 = 8 ;
+X3= cos((n.*T2.*pi)./12);
+X_3 = fft(X3);
+y = fftshift(X_3);
+Y = abs(y);
+fs =1/8;
+df = fs/ length(X3);
+fn = fs/2;
+figure();
+f = -fn:df:fn-df;
+plot(f,Y);
+xlabel('frequency [HZ]');
+ylabel('DTFT');

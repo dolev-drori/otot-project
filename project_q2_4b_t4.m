@@ -1,0 +1,14 @@
+n = -100:1:100;
+T1 = 4;
+X2= (sinc((n.*T1)./12)).^2;
+X_2 = fft(X2);
+y = fftshift(X_2);
+Y = abs(y);
+fs =4*pi;
+df = fs/ length(X2);
+fn = fs/2;
+figure();
+f = -fn:df:fn-df;
+plot(f,Y);
+xlabel('frequency [HZ]');
+ylabel('DTFT');
