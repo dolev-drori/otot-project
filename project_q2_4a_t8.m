@@ -4,7 +4,7 @@ X1= sinc((n.*T2)./6);
 X_1 = fft(X1);
 y = fftshift(X_1);
 Y = abs(y);
-fs =4*pi;
+fs =2*pi/4;
 df = fs/ length(X1);
 fn = fs/2;
 figure();
