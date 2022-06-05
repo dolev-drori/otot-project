@@ -1,0 +1,19 @@
+N = [20;50];
+x = 0:100;
+xn = ones( 20, 1);
+figure('Name','x[n]');
+stem(xn);
+hold on
+xlabel('n');
+ylabel('x[n]');
+legend('N=20')
+hold on
+xn = ones( 50, 1);
+figure('Name','x[n]');
+stem(xn);
+xlabel('n');
+ylabel('x[n]');
+legend('N=50')
+hold off
+ 
+
